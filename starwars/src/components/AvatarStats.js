@@ -6,15 +6,9 @@ const AvatarStats = props => {
     <div className="renderTable">
       {props.data.map(item => {
         return (
-          <div className="avatarStatCard">
+          <div className="avatarStatCard" key={item.created}>
             <div>
               <h2 className="renderName">Name: {item.name}</h2>
-              <div
-                onLoad={e => {
-                  if (e.target.innerText == item.name)
-                  e.target.style.content = `./${item.name}.png`;
-                }}
-              />
             </div>
             <div className="cardTray">
               <div className="subCard">
